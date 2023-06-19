@@ -59,17 +59,9 @@ This is a ruby application which will help us to decrypt any morse code received
 
 ### Key Features <a name="key-features"></a>
 
-- **Install Postgress**
-- **Use pgAdmin4**
-- **Follow Gitflow**
-- **Create Database**
-- **Create Table**
-- **Query Table**
-- **join Tables**
-- **Insert data in table**
-- **Use Rollback, Savepoint, and commit**
-- **Use Many-to-many relations**
-- **Use FK indexes**
+- **Implement classes and objects in Ruby**
+- **Implement encapsulation and inheritance with Ruby**
+- **Run a program using the command line**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
