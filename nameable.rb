@@ -1,6 +1,5 @@
 class Nameable
   def correct_name(name)
-    name.capitalize!
-    name[1, 10]
+    raise NotImplementedError
   end
 end
