@@ -4,6 +4,7 @@ class Classroom < Student
   attr_accessor :label, :student
 
   def initialize(label)
+    super()
     @label = label
     @students = []
   end
