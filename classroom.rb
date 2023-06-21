@@ -1,7 +1,8 @@
 require_relative './student'
 
 class Classroom < Student
-  attr_accessor :label, :student
+  attr_reader :student
+  attr_accessor :label 
 
   def initialize(label)
     super()
