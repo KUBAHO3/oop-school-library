@@ -62,6 +62,8 @@ This is a ruby application which will help us to decrypt any morse code received
 - **Implement classes and objects in Ruby**
 - **Implement encapsulation and inheritance with Ruby**
 - **Run a program using the command line**
+- **Implement composition.**
+- **Set up associations between classes and objects.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
