@@ -33,7 +33,7 @@ class Main
     when 4
       @app.create_book
     when 5
-      @app.create_rental
+      @app.create_rentals
     when 6
       @app.rental_list
     end

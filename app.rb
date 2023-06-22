@@ -4,26 +4,25 @@ require './student'
 require './rental'
 
 class App
-  attr_accessor :books, :teachers, :students, :rentals
+  attr_accessor :books, :persons, :rentals
 
   def initialize
     @books = []
-    @teachers = []
-    @students = []
+    @persons = []
     @rentals = []
   end
 
   def book_list
     print "\nSorry you can't find any books\n" if @books.empty?
     @books.each_with_index do |book, index|
-      print "\n(#{index + 1}) Title: \"#{book.title}\", Author: \"#{book.author}\"\n"
+      print "\n(#{index}) Title: \"#{book.title}\", Author: \"#{book.author}\"\n"
     end
   end
 
   def people_list
-    people = [*@students, *@teachers]
+    people = @persons
     people.each_with_index do |person, index|
-      print "\n(#{index + 1}) Name: \"#{person.name}\", Age: \"#{person.age}\", id: \"#{person.id}\"\n"
+      print "\n(#{index}) Name: \"#{person.name}\", Age: \"#{person.age}\", id: \"#{person.id}\"\n"
     end
     print "\nSorry you can't find any person\n" if people.empty?
   end
@@ -48,7 +47,7 @@ class App
     puts "\n#{new_book.title} created successfully\n"
   end
 
-  def create_rental
+  def create_rentals
     print "Select a book from the following list by number \n"
     book_list
     book = gets.chomp.to_i
@@ -57,8 +56,8 @@ class App
     person = gets.chomp.to_i
     print 'select a date'
     date = gets.chomp
-    people = [*@teachers, *@students]
-    new_rental = Rental.new(date, @books[book - 1], people[person - 1])
+    people = @persons
+    new_rental = Rental.new(date, @books[book], people[person])
     @rentals << new_rental
     print 'Rental created successfully'
   end
@@ -73,11 +72,12 @@ class App
       name = gets.chomp.to_s
       print 'Enter the Age: '
       age = gets.chomp.to_i
-      print 'Enter the Classroom: '
-      classroom = gets.chomp
-      new_student = Student.new(age, classroom)
+      print 'Enter the parent permission[Y/N]: '
+      parent_permission = gets.chomp
+      parent_permission = %w[y Y].include?(parent_permission)
+      new_student = Student.new(age, parent_permission)
       new_student.name = name
-      @students << new_student
+      @persons.push(new_student)
       print "\n#{new_student.name} was added successfully"
 
     when 2
@@ -88,7 +88,7 @@ class App
       print 'Enter the Specialization: '
       speecialization = gets.chomp
       new_teacher = Teacher.new(age, name, speecialization)
-      @teachers << new_teacher
+      @persons.push(new_teacher)
       puts "\n#{new_teacher.name} was added successfully"
     end
   end
