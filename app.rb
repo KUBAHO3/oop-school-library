@@ -29,4 +29,34 @@ class App
       print "Date: #{rental.date}, Title: #{rental.book.title}, Author: #{rental.book.author}\n" if id == rental.person.id
     end
   end
+
+  def create_person
+    print "Choose whom you want to create\n (1)Student\n (2)Teacher"
+    creator = gets.chomp.to_i
+
+    case creator
+    when 1
+      print "Enter the Name: "
+      name = gets.chomp.to_s
+      print "Enter the Age: "
+      age = gets.chomp.to_i
+      print "Enter the Classroom: "
+      classroom = gets.chomp
+      new_student = Student.new(age, classroom)
+      new_student.name = name
+      @students << new_student
+      print "#{new_student.name} was added successfully"
+
+    when 2
+      print "Enter the Name: "
+      name = gets.chomp
+      print "Enter the Age: "
+      age = gets.chomp.to_i
+      print "Enter the Specialization: "
+      speecialization = gets.chomp
+      new_teacher = Teacher.new(age, name, speecialization)
+      @teachers << new_teacher
+      puts "#{new_teacher.name} was added successfully" 
+    end
+  end
 end
