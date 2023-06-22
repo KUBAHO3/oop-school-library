@@ -21,21 +21,20 @@ class App
   end
 
   def people_list
-    print "\nSorry you can't find any person\n" if people.empty?
     people = [*@students, *@teachers]
     people.each_with_index do |person, index|
-      print "\n(#{index + 1}) Name: \"#{person.name}\", Age: \"#{person.age}\"\n"
+      print "\n(#{index + 1}) Name: \"#{person.name}\", Age: \"#{person.age}\", id: \"#{person.id}\"\n"
     end
+    print "\nSorry you can't find any person\n" if people.empty?
   end
 
   def rental_list
     puts "Please enter person's id to see rentals"
-    id = gets.chomp
+    people_list
     print "\nSorry you can't find any rentals\n" if @rentals.empty?
-    @rentals.each do |rental|
-      if id == rental.person.id
-        print "\nDate: #{rental.date}, Title: #{rental.book.title}, Author: #{rental.book.author}\n"
-      end
+    id = gets.chomp.to_i
+    @rentals.each do |i|
+      print "\nDate: #{i.date}, Title: #{i.book.title}, Author: #{i.book.author}\n" if id == i.person.id
     end
   end
 
@@ -46,20 +45,20 @@ class App
     author = gets.chomp
     new_book = Book.new(title, author)
     @books << new_book
-    puts "#{new_book.title} created successfully"
+    puts "\n#{new_book.title} created successfully\n"
   end
 
   def create_rental
     print "Select a book from the following list by number \n"
     book_list
     book = gets.chomp.to_i
-    print "select a person \n"
+    print "select a person's number \n"
     people_list
     person = gets.chomp.to_i
     print 'select a date'
     date = gets.chomp
     people = [*@teachers, *@students]
-    new_rental = Rental.new(date, @books[book], people[person])
+    new_rental = Rental.new(date, @books[book - 1], people[person - 1])
     @rentals << new_rental
     print 'Rental created successfully'
   end
