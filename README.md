@@ -64,6 +64,7 @@ This is a ruby application which will help us to decrypt any morse code received
 - **Run a program using the command line**
 - **Implement composition.**
 - **Set up associations between classes and objects.**
+- **Refactored the codes.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +104,12 @@ Not yet deployed ...
 :bust_in_silhouette: **KUBAHO LINNE Heaven**
 - GitHub: [@KUBAHO3](https://github.com/KUBAHO3)
 - Twitter: [@KubahoH](https://twitter.com/KubahoH)
-- LinkedIn: [Kubaho Linne Heaven](https://www.linkedin.com/in/kubaho-linne-heaven-78ab37208/)
+- LinkedIn: [Kubaho Linne Heaven](https://www.linkedin.com/in/kubaho-linne-heaven/)
+
+:bust_in_silhouette: **Basim Aljazaeri**
+- GitHub: [@ShiroYaksha90](https://github.com/ShiroYaksha90)
+- Twitter: [@Basim_AlJazaeri](https://twitter.com/Basim_AlJazaeri)
+- LinkedIn: [Basim Aljazaeri](https://www.linkedin.com/in/basimaljazaeri/)
 
 <!-- FUTURE FEATURES -->
 
