@@ -3,8 +3,7 @@ require './create_person'
 require './create_book'
 require './create_rental'
 class Input
-
-    def user_input(app, num)
+  def user_input(app, num)
     case num
     when 1 then app.book_list
     when 2 then app.people_list
