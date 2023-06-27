@@ -1,0 +1,1 @@
+[{"json_class":"Rental","data":["12/01/2009",{"json_class":"Book","data":["Queen shebah","Roberto"]},{"json_class":"Teacher","data":[43,"Linne","Web development",6]}]},{"json_class":"Rental","data":["02/05/2015",{"json_class":"Book","data":["My life","Heaven"]},{"json_class":"Student","data":[21,"Kubaho",true,263]}]}]
