@@ -23,6 +23,7 @@ def main
     actions.user_input(app, num)
   end
   p 'Thanks for using the app, goodbye'
+  app.keeping_data
 end
 
 main
