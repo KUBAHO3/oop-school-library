@@ -1,3 +1,4 @@
+require 'json'
 require './book'
 require './teacher'
 require './student'
@@ -45,6 +46,21 @@ class App
     id = gets.chomp.to_i
     @rentals.each do |i|
       print "\nDate: #{i.date}, Title: #{i.book.title}, Author: #{i.book.author}\n" if id == i.person.id
+    end
+  end
+
+  def keeping_data
+    File.open('people.json', 'w+') do |file|
+      people = JSON.dump(@people)
+      file.write(people)
+    end
+    File.open('rentals.json', 'w+') do |file|
+      rentals = JSON.dump(@rentals)
+      file.write(rentals)
+    end
+    File.open('books.json', 'w+') do |file|
+      books = JSON.dump(@books)
+      file.write(books)
     end
   end
 end

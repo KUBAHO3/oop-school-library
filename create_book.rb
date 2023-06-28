@@ -1,4 +1,3 @@
-require 'json'
 class CreateBook
   def initialize(book)
     @books = book
@@ -23,9 +22,5 @@ class CreateBook
   def add_to_collection(new_book)
     @books.push(new_book)
     puts "#{new_book.title} created successfully"
-    File.open('books.json', 'w+') do |file|
-      books = JSON.dump(@books)
-      file.write(books)
-    end
   end
 end
