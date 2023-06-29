@@ -24,4 +24,10 @@ describe Student do
       expect(@student.parent_permission).to be false
     end
   end
+
+  describe '#play_hooky' do
+    it "Should return '¯(ツ)/¯'" do
+      expect(@student.play_hooky).to eql '¯(ツ)/¯'
+    end
+  end
 end
