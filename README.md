@@ -16,7 +16,6 @@
   - [:hammer\_and\_wrench: Built With ](#hammer_and_wrench-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🦻 WalkThrough Video ](#-walkthrough-video-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -65,14 +64,6 @@ This is a ruby application which will help us to decrypt any morse code received
 - **Implement composition.**
 - **Set up associations between classes and objects.**
 - **Refactored the codes.**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- WalkThrough Video -->
-
-## 🦻 WalkThrough Video <a name="#walkthrough-demo"></a>
-
--  Comming Soon...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
